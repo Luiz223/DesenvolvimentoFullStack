@@ -1,6 +1,6 @@
 const express = require("express")
 const exphbs = require("express-handlebars")
-const mysql = require("mysql")
+const mysql = require("mysql2")
 
 const app = express()
 
@@ -28,8 +28,8 @@ const conn = mysql.createConnection({
     hots: "localhost",
     user: "root",
     password: "root",
-    database: "nomemysql",
-    port: 3307
+    database: "nodemysql",
+    port: 3306
 })
 
 conn.connect((error) => {
